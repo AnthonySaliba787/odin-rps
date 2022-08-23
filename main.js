@@ -44,46 +44,6 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function game() {
-  let playerScore = 0;
-  let botScore = 0;
-
-  for (i = 0; i < 5; i++) {
-    let playerSelection = prompt("Enter your choice:");
-    let computerSelection = getComputerChoice();
-    let [result, scoreDecision] = playRound(playerSelection, computerSelection);
-
-    console.log(result);
-    if (scoreDecision == 0) {
-      botScore += 1;
-    } else if (scoreDecision == 1) {
-      playerScore += 1;
-    } else {
-      playerScore += 1;
-      botScore += 1;
-    }
-  }
-  if (playerScore > botScore) {
-    console.log(
-      "Congratulations! You won with a score of " +
-        playerScore +
-        " vs " +
-        botScore +
-        "."
-    );
-  } else if (playerScore < botScore) {
-    console.log(
-      "Whoops! You lost with a score of " +
-        playerScore +
-        " vs " +
-        botScore +
-        "."
-    );
-  } else {
-    console.log(
-      "There's a draw with a score of " + playerScore + " vs " + botScore + "."
-    );
-  }
-}
+function game() {}
 
 game();
