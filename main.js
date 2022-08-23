@@ -5,54 +5,40 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  playerSelection.toLowerCase();
-  if (playerSelection == computerSelection) {
+  let plrSel = playerSelection.toLowerCase();
+  if (plrSel == computerSelection) {
     return [
-      console.log(
-        "Draw! " + playerSelection + " vs " + computerSelection + "."
-      ),
+      console.log("Draw! " + plrSel + " vs " + computerSelection + "."),
       2,
     ];
-  } else if (playerSelection == "rock" && computerSelection == "paper") {
+  } else if (plrSel == "rock" && computerSelection == "paper") {
     return [
-      console.log(
-        "You lose! " + playerSelection + " vs " + computerSelection + "."
-      ),
+      console.log("You lose! " + plrSel + " vs " + computerSelection + "."),
       0,
     ];
-  } else if (playerSelection == "rock" && computerSelection == "scissors") {
+  } else if (plrSel == "rock" && computerSelection == "scissors") {
     return [
-      console.log(
-        "You win! " + playerSelection + " vs " + computerSelection + "."
-      ),
+      console.log("You win! " + plrSel + " vs " + computerSelection + "."),
       1,
     ];
-  } else if (playerSelection == "paper" && computerSelection == "rock") {
+  } else if (plrSel == "paper" && computerSelection == "rock") {
     return [
-      console.log(
-        "You win! " + playerSelection + " vs " + computerSelection + "."
-      ),
+      console.log("You win! " + plrSel + " vs " + computerSelection + "."),
       1,
     ];
-  } else if (playerSelection == "paper" && computerSelection == "scissors") {
+  } else if (plrSel == "paper" && computerSelection == "scissors") {
     return [
-      console.log(
-        "You lose! " + playerSelection + " vs " + computerSelection + "."
-      ),
+      console.log("You lose! " + plrSel + " vs " + computerSelection + "."),
       0,
     ];
-  } else if (playerSelection == "scissors" && computerSelection == "paper") {
+  } else if (plrSel == "scissors" && computerSelection == "paper") {
     return [
-      console.log(
-        "You win! " + playerSelection + " vs " + computerSelection + "."
-      ),
+      console.log("You win! " + plrSel + " vs " + computerSelection + "."),
       1,
     ];
-  } else if (playerSelection == "scissors" && computerSelection == "rock") {
+  } else if (plrSel == "scissors" && computerSelection == "rock") {
     return [
-      console.log(
-        "You lose! " + playerSelection + " vs " + computerSelection + "."
-      ),
+      console.log("You lose! " + plrSel + " vs " + computerSelection + "."),
       0,
     ];
   }
